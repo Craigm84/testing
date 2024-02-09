@@ -50,13 +50,12 @@ public class SeleniumDemoTest {
 		submit.click();
 
 		WebElement displayN = this.driver.findElement(By.id("name"));
-		WebElement displayE = this.driver.findElement(By.id("email"));
-		WebElement displayCA = this.driver.findElement(By.id("currentAddress"));
-		WebElement displayPA = this.driver.findElement(By.id("permanentAddress"));
-
 		Assertions.assertEquals(true, displayN.getText().contains("Craig"));
+		WebElement displayE = this.driver.findElement(By.id("email"));
 		Assertions.assertEquals(true, displayE.getText().contains("Craig@Morris.com"));
+		WebElement displayCA = this.driver.findElement(By.id("currentAddress"));
 		Assertions.assertEquals(true, displayCA.getText().contains("Ravenstone"));
+		WebElement displayPA = this.driver.findElement(By.id("permanentAddress"));
 		Assertions.assertEquals(true, displayPA.getText().contains("Leicestershire"));
 	}
 
